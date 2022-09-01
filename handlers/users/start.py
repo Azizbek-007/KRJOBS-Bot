@@ -8,7 +8,7 @@ from keyboards.default import menu
 # import logging
 
 
-@rate_limit(limit=10)
+@rate_limit(limit=1)
 @dp.message_handler(CommandStart(), IsPrivate())
 async def bot_start(message: types.Message):
     await message.answer(f"Sálem {message.from_user.first_name}! Ózińizge kerekli bólimdi tańlań",
