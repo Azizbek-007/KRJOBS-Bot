@@ -13,3 +13,7 @@ from keyboards.default import menu
 async def bot_start(message: types.Message):
     await message.answer(f"Sálem {message.from_user.first_name}! Ózińizge kerekli bólimdi tańlań",
         reply_markup=menu)
+
+@dp.message_handler(IsPrivate(), commands=['developer'])
+async def bot_start(message: types.Message):
+    await message.answer("👨‍💻 @Azizbek_Berdimuratov")
